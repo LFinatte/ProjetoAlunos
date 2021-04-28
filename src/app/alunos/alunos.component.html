@@ -1,27 +1,42 @@
-<h2>{{aluno.name | uppercase}} Details </h2>
+<h2>ALUNOS: </h2>
 
-<div class="ra alinhamento">
-    <label for="ra">RA: </label>
-    <input id="ra" [(ngModel)]="aluno.ra" placeholder="ra">
+<ul class="alunos">
+    <li *ngFor="let aluno of alunos"
+        [class.selected]="aluno === selectedAluno"
+        (click)="onSelect(aluno)">
+        <span class="badge">{{aluno.ra}}</span> {{aluno.name}}
+    </li>
+</ul>
+
+<div *ngIf="selectedAluno">
+
+    <h2 class="titulo">Mais informações sobre: {{selectedAluno.name | uppercase}} </h2>
+
+    <div class="informacoes">
+        <div>
+            <span class="ra">Número Matrícula:  </span>{{selectedAluno.ra}}   
+        </div>
+
+        <div>
+            <span class="name">Nome Aluno: </span>{{selectedAluno.name}}
+        </div>
+
+        <div>
+            <span class="idade">Idade: </span>{{selectedAluno.idade}}
+        </div>
+
+        <div>
+            <span class="curso">Curso: </span>{{selectedAluno.curso}}
+        </div>
+        
+        <div>
+            <span class="semestre">Semestre: </span>{{selectedAluno.semestre}}
+        </div>
+    </div>
+    
+    
+    
+
+
+
 </div>
-
-<div class="name alinhamento">
-    <label for="name">Nome Aluno: </label>
-    <input id="name" [(ngModel)]="aluno.name" placeholder="name">
-</div>
-
-<div class="curso alinhamento">
-    <label for="curso">Curso: </label>
-    <input id="curso" [(ngModel)]="aluno.curso" placeholder="curso">
-</div>
-
-<div class="semestre alinhamento">
-    <label for="semestre">Semestre: </label>
-    <input id="semestre" [(ngModel)]="aluno.semestre" placeholder="semestre">
-</div>
-
-<div class="idade alinhamento">
-    <label for="idade">Idade: </label>
-    <input id="idade" [(ngModel)]="aluno.idade" placeholder="idade">
-</div>
-
