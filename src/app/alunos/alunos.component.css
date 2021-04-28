@@ -1,0 +1,10 @@
+.ra, .name, .curso, .semestre, .idade{
+    margin: 5px 0px;
+}
+
+.alinhamento{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    width: 200px;
+}
