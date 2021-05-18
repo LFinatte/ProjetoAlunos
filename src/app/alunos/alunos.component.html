@@ -1,3 +1,5 @@
+<app-aluno-detail [aluno]="selectedAluno"></app-aluno-detail>
+
 <h2>ALUNOS: </h2>
 
 <ul class="alunos">
@@ -8,35 +10,4 @@
     </li>
 </ul>
 
-<div *ngIf="selectedAluno">
 
-    <h2 class="titulo">Mais informações sobre: {{selectedAluno.name | uppercase}} </h2>
-
-    <div class="informacoes">
-        <div>
-            <span class="ra">Número Matrícula:  </span>{{selectedAluno.ra}}   
-        </div>
-
-        <div>
-            <span class="name">Nome Aluno: </span>{{selectedAluno.name}}
-        </div>
-
-        <div>
-            <span class="idade">Idade: </span>{{selectedAluno.idade}}
-        </div>
-
-        <div>
-            <span class="curso">Curso: </span>{{selectedAluno.curso}}
-        </div>
-        
-        <div>
-            <span class="semestre">Semestre: </span>{{selectedAluno.semestre}}
-        </div>
-    </div>
-    
-    
-    
-
-
-
-</div>

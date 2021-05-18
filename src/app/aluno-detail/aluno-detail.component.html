@@ -1,0 +1,27 @@
+<div *ngIf="aluno">
+
+    <h2 class="titulo">Mais informações sobre: {{aluno.name | uppercase}} </h2>
+
+    <div class="informacoes">
+        <div>
+            <span class="ra">Número Matrícula:  </span>{{aluno.ra}}   
+        </div>
+
+        <div>
+            <span class="name">Nome Aluno: </span>{{aluno.name}}
+        </div>
+
+        <div>
+            <span class="idade">Idade: </span>{{aluno.idade}}
+        </div>
+
+        <div>
+            <span class="curso">Curso: </span>{{aluno.curso}}
+        </div>
+        
+        <div>
+            <span class="semestre">Semestre: </span>{{aluno.semestre}}
+        </div>
+    </div>
+    
+</div>
