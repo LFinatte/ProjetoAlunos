@@ -9,9 +9,9 @@ import { Aluno } from '../aluno'
 })
 export class AlunoDetailComponent implements OnInit {
 
-  constructor() { }
-
   @Input() aluno?: Aluno;
+
+  constructor() { }
 
   ngOnInit(): void {
   }
