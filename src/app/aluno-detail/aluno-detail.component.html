@@ -3,25 +3,33 @@
     <h2 class="titulo">Mais informações sobre: {{aluno.name | uppercase}} </h2>
 
     <div class="informacoes">
+       
         <div>
-            <span class="ra">Número Matrícula:  </span>{{aluno.ra}}   
+            <label for="aluno-ra">RA: </label>
+            <input id="aluno-ra" [(ngModel)]="aluno.ra" placeholder="Aluno ra"/>
         </div>
 
         <div>
-            <span class="name">Nome Aluno: </span>{{aluno.name}}
+            <label for="aluno-name">Nome: </label>
+            <input id="aluno-name" [(ngModel)]="aluno.name" placeholder="Aluno name"/>
         </div>
 
         <div>
-            <span class="idade">Idade: </span>{{aluno.idade}}
+            <label for="aluno-idade">Idade: </label>
+            <input id="aluno-idade" [(ngModel)]="aluno.idade" placeholder="Aluno idade"/>
         </div>
 
         <div>
-            <span class="curso">Curso: </span>{{aluno.curso}}
+            <label for="aluno-curso">Curso: </label>
+            <input id="aluno-curso" [(ngModel)]="aluno.curso" placeholder="Aluno curso"/>
         </div>
         
         <div>
-            <span class="semestre">Semestre: </span>{{aluno.semestre}}
+            <label for="aluno-semestre">Semestre: </label>
+            <input id="aluno-semestre" [(ngModel)]="aluno.semestre" placeholder="Aluno semestre"/>
         </div>
     </div>
+
+    <button (click)="goBack()">go back</button>
     
 </div>

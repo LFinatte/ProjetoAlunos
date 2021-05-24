@@ -3,11 +3,11 @@ import { Aluno } from '../aluno';
 import { AlunoService } from '../aluno.service';
 
 @Component({
-  selector: 'app-alunos',
-  templateUrl: './alunos.component.html',
-  styleUrls: ['./alunos.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: [ './dashboard.component.css' ]
 })
-export class AlunosComponent implements OnInit {
+export class DashboardComponent implements OnInit {
   alunos: Aluno[] = [];
 
   constructor(private alunoService: AlunoService) { }
@@ -18,6 +18,6 @@ export class AlunosComponent implements OnInit {
 
   getAlunos(): void {
     this.alunoService.getAlunos()
-    .subscribe(alunos => this.alunos = alunos);
+      .subscribe(alunos => this.alunos = alunos.slice(1, 5));
   }
 }

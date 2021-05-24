@@ -1,13 +1,13 @@
-<app-aluno-detail [aluno]="selectedAluno"></app-aluno-detail>
-
-<h2>ALUNOS: </h2>
+<h2>ALUNOS</h2>
 
 <ul class="alunos">
-    <li *ngFor="let aluno of alunos"
-        [class.selected]="aluno === selectedAluno"
-        (click)="onSelect(aluno)">
-        <span class="badge">{{aluno.ra}}</span> {{aluno.name}}
-    </li>
+
+  <li *ngFor="let aluno of alunos">
+    <a routerLink="/detail/{{aluno.ra}}">
+      <span class="badge">{{aluno.rs}}</span> {{aluno.name}}
+    </a>
+    
+  </li>
 </ul>
 
 
